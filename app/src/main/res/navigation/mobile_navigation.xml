@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.modular.proyecto.ui.home.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/carreraFragment"
+        android:name="com.modular.proyecto.CarreraFragment"
+        android:label="Carrera"
+        tools:layout="@layout/fragment_carrera" />
+    <activity
+        android:id="@+id/Materias"
+        android:name="com.modular.proyecto.Materias"
+        android:label="activity_prueba"
+        tools:layout="@layout/activity_materias" />
+
+
+</navigation>

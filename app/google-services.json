@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "466415650057",
+    "firebase_url": "https://udehelp-99286-default-rtdb.firebaseio.com",
+    "project_id": "udehelp-99286",
+    "storage_bucket": "udehelp-99286.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466415650057:android:7b1dcb4f0686bb1736bfd8",
+        "android_client_info": {
+          "package_name": "com.edson.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466415650057-pf0cqvppe8545mhipglgkff72gocn6mp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdDFRnnTl9u_jxh0T-FjhCpXe6H5m2-n8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466415650057-pf0cqvppe8545mhipglgkff72gocn6mp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
