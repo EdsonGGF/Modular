@@ -52,6 +52,8 @@ public class Becas extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
        bAdapter.startListening();
+        bRecycler.getRecycledViewPool().clear();
+        bAdapter.notifyDataSetChanged();
     }
 
     @Override

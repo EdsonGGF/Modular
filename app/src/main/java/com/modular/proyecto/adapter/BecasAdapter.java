@@ -1,16 +1,22 @@
 package com.modular.proyecto.adapter;
 
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.modular.proyecto.LoginActivity;
 import com.modular.proyecto.R;
+import com.modular.proyecto.WelcomeActivity;
+import com.modular.proyecto.detalle_beca;
 import com.modular.proyecto.model.Beca;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -43,7 +49,7 @@ public class BecasAdapter extends FirestoreRecyclerAdapter<Beca,BecasAdapter.Vie
         return new ViewHolder(v);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView nombre,descripcion;
         CircleImageView img;
@@ -53,9 +59,15 @@ public class BecasAdapter extends FirestoreRecyclerAdapter<Beca,BecasAdapter.Vie
             nombre=itemView.findViewById(R.id.textNombreBeca);
             descripcion=itemView.findViewById(R.id.txtDescripcion);
             img=(CircleImageView) itemView.findViewById(R.id.imagen_Beca);
+            itemView.setOnClickListener(this);
+        }
 
-
-
+        @Override
+        public void onClick(View v) {
+        int pos=getAdapterPosition();
+            Log.i("POSICION",""+pos);
+           Intent intent=new Intent(v.getContext(),detalle_beca.class);
+           v.getContext().startActivity(intent);
         }
     }
 }
