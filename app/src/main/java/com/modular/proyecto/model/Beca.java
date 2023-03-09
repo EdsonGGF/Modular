@@ -1,6 +1,8 @@
 package com.modular.proyecto.model;
 
-public class Beca {
+import java.io.Serializable;
+
+public class Beca implements Serializable {
     String descripcion;
     String img;
     String nombre;

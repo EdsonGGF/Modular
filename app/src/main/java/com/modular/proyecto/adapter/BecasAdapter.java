@@ -40,6 +40,17 @@ public class BecasAdapter extends FirestoreRecyclerAdapter<Beca,BecasAdapter.Vie
         viewHolder.descripcion.setText(Beca.getDescripcion());
         Glide.with(viewHolder.img.getContext()).load(Beca.getImg()).into(viewHolder.img);
 
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), detalle_beca.class);
+                //intent.putExtra("model", model);
+                intent.putExtra("nombre", Beca.getNombre());
+                intent.putExtra("descripcion", Beca.getDescripcion());
+                intent.putExtra("imagen",Beca.getImg());
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @NonNull
@@ -49,7 +60,7 @@ public class BecasAdapter extends FirestoreRecyclerAdapter<Beca,BecasAdapter.Vie
         return new ViewHolder(v);
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre,descripcion;
         CircleImageView img;
@@ -59,15 +70,15 @@ public class BecasAdapter extends FirestoreRecyclerAdapter<Beca,BecasAdapter.Vie
             nombre=itemView.findViewById(R.id.textNombreBeca);
             descripcion=itemView.findViewById(R.id.txtDescripcion);
             img=(CircleImageView) itemView.findViewById(R.id.imagen_Beca);
-            itemView.setOnClickListener(this);
+           // itemView.setOnClickListener(this);
         }
-
+/*
         @Override
         public void onClick(View v) {
         int pos=getAdapterPosition();
             Log.i("POSICION",""+pos);
            Intent intent=new Intent(v.getContext(),detalle_beca.class);
            v.getContext().startActivity(intent);
-        }
+        }*/
     }
 }
