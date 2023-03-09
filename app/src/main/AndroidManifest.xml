@@ -16,21 +16,24 @@
         android:theme="@style/Theme.Login"
         tools:targetApi="31">
         <activity
-            android:name="com.modular.proyecto.Materias"
+            android:name=".Becas"
             android:exported="false" />
         <activity
-            android:name="com.modular.proyecto.StudentActivity"
+            android:name=".Materias"
+            android:exported="false" />
+        <activity
+            android:name=".StudentActivity"
             android:exported="false"
             android:label="@string/title_activity_student"
             android:theme="@style/Theme.Login.NoActionBar" />
         <activity
-            android:name="com.modular.proyecto.WelcomeActivity"
+            android:name=".WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name="com.modular.proyecto.LoginActivity"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.modular.proyecto.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

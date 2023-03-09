@@ -16,11 +16,19 @@
         android:name="com.modular.proyecto.CarreraFragment"
         android:label="Carrera"
         tools:layout="@layout/fragment_carrera" />
+
     <activity
         android:id="@+id/Materias"
         android:name="com.modular.proyecto.Materias"
         android:label="activity_prueba"
         tools:layout="@layout/activity_materias" />
+
+    <activity
+        android:id="@+id/Becas"
+        android:name="com.modular.proyecto.Becas"
+        android:label="activity_prueba"
+        tools:layout="@layout/activity_becas" />
+
 
 
 </navigation>

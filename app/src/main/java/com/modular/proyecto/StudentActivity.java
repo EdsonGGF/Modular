@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -30,10 +32,11 @@ public class StudentActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityStudentBinding binding;
-    TextView navHeaderCodigo,navHeaderName;
+    TextView navHeaderCodigo,navHeaderName,imagen;
     FirebaseUser fuser;
     DatabaseReference dref,dr;
     String uid;
+    ImageView img;
 
 
     @Override
@@ -56,7 +59,7 @@ public class StudentActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.carreraFragment,R.id.Materias)
+                R.id.nav_home, R.id.carreraFragment,R.id.Materias,R.id.Becas)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_student);
@@ -65,6 +68,7 @@ public class StudentActivity extends AppCompatActivity {
 
         navHeaderName= navigationView.getHeaderView(0).findViewById(R.id.Student_Name);
         navHeaderCodigo =navigationView.getHeaderView(0).findViewById(R.id.Codigo);
+
 
         fuser= FirebaseAuth.getInstance().getCurrentUser();
         uid=fuser.getUid();
@@ -79,6 +83,8 @@ public class StudentActivity extends AppCompatActivity {
                 Log.i("NOMBRE","NOMBRE: "+name);
                 navHeaderName.setText(name);
                 navHeaderCodigo.setText(codigo);
+
+
             }
 
             @Override

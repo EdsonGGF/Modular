@@ -59,7 +59,6 @@ public class MateriaAdapter extends FirestoreRecyclerAdapter<Materia,MateriaAdap
             img=(CircleImageView) itemView.findViewById(R.id.imagen_Materia);
             maestro=itemView.findViewById(R.id.txtmaestro);
             materia=itemView.findViewById(R.id.textmateria);
-            carrera.setText("Prueba");
 
 
         }
