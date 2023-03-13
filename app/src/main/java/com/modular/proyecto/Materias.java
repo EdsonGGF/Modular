@@ -1,12 +1,25 @@
 package com.modular.proyecto;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.CollectionReference;
 import com.modular.proyecto.adapter.MateriaAdapter;
 import com.modular.proyecto.databinding.ActivityMateriasBinding;
 import com.modular.proyecto.databinding.ActivityStudentBinding;
@@ -22,7 +35,6 @@ public class Materias extends AppCompatActivity {
     RecyclerView mRecycler;
     MateriaAdapter mAdapter;
     FirebaseFirestore mFirestore;
-    Query query;
 
 
 
@@ -37,15 +49,12 @@ public class Materias extends AppCompatActivity {
         mRecycler=findViewById(R.id.recyclerViewSingle);
         mRecycler.setLayoutManager(new LinearLayoutManager(this));
 
+        SharedPreferences prefs = getSharedPreferences("datosCarrera", MODE_PRIVATE);
+        String carrera = prefs.getString("carrera", null);
 
-
-
-
-
-
-
-
-        query=mFirestore.collection("materias");
+       Log.i("FILTRAR","FILTRAR"+ carrera);
+        CollectionReference materiasRef=mFirestore.collection("materias");
+        Query query=materiasRef.whereEqualTo("carrera", carrera);
         FirestoreRecyclerOptions<Materia> firestoreRecyclerOptions =
                 new FirestoreRecyclerOptions.Builder<Materia>().setQuery(query,Materia.class).build();
         mAdapter=new MateriaAdapter(firestoreRecyclerOptions);

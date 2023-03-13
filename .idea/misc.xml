@@ -46,15 +46,21 @@
         <entry key="..\:/Users/Asus/Downloads/LOGIN MATERIAS/LOGINPROYECTO/app/src/main/res/menu/activity_main_drawer.xml" value="0.5" />
         <entry key="..\:/Users/Asus/Downloads/LOGIN MATERIAS/LOGINPROYECTO/app/src/main/res/menu/main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_becas.xml" value="0.16" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_detalle_beca.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_materias.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_student.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/activity_welcome.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/app_bar_student.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/content_student.xml" value="0.1" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_becas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_carrera.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_item_list.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/fragment_materias.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/nav_header_student.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/main_item.xml" value="0.1" />
+        <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/nav_header_student.xml" value="0.33" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/view_beca_single.xml" value="0.4180790960451977" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/view_becas_single.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Asus/Downloads/Proyecto Modular/Modular/app/src/main/res/layout/view_materia_single.xml" value="0.20416666666666666" />

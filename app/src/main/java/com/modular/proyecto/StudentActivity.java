@@ -1,9 +1,12 @@
 package com.modular.proyecto;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,7 +35,7 @@ public class StudentActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityStudentBinding binding;
-    TextView navHeaderCodigo,navHeaderName,imagen;
+    TextView navHeaderCodigo,navHeaderName, navHeaderCarrera;
     FirebaseUser fuser;
     DatabaseReference dref,dr;
     String uid;
@@ -68,6 +71,9 @@ public class StudentActivity extends AppCompatActivity {
 
         navHeaderName= navigationView.getHeaderView(0).findViewById(R.id.Student_Name);
         navHeaderCodigo =navigationView.getHeaderView(0).findViewById(R.id.Codigo);
+        navHeaderCarrera=navigationView.getHeaderView(0).findViewById(R.id.carreraAlumno);
+        img=navigationView.getHeaderView(0).findViewById(R.id.imagenAlumno);
+
 
 
         fuser= FirebaseAuth.getInstance().getCurrentUser();
@@ -80,9 +86,26 @@ public class StudentActivity extends AppCompatActivity {
 
                 String name=(String) snapshot.child(uid).child("nombre").getValue();
                 String codigo= String.valueOf(snapshot.child(uid).child("codigo").getValue());
+                String carrera=String.valueOf(snapshot.child(uid).child("carrera").getValue());
+                String url=String.valueOf(snapshot.child(uid).child("img").getValue());
                 Log.i("NOMBRE","NOMBRE: "+name);
                 navHeaderName.setText(name);
                 navHeaderCodigo.setText(codigo);
+                navHeaderCarrera.setText(carrera);
+
+                Glide.with(StudentActivity.this.getApplicationContext())
+                        .load(url)
+                        .into(img);
+
+                SharedPreferences.Editor editor = getSharedPreferences("datosCarrera", MODE_PRIVATE).edit();
+                editor.putString("carrera", carrera);
+                editor.apply();
+
+
+
+
+
+
 
 
             }
